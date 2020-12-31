@@ -1,0 +1,9 @@
+main: us.mytheria.gh.GrapplingHook
+name: GrapplingHook
+version: 1.0
+description: GrapplingHook plugin
+api-version: 1.16
+commands:
+  grapplinghook:
+    description: Givea loros a jugadores
+    aliases: [gh, ghook]

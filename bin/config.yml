@@ -1,0 +1,36 @@
+ItemMeta:
+#Everything related to ItemMeta. DisplayName is the GrapplingHook Name. Lore is the description. CustomModelData is used for resource-packs, check this link: https://minecraft.gamepedia.com/Model#Item_predicates
+  DisplayName: §aGrappling Hook
+  Lore:
+  - §7Travel around in style using
+  - §7this Grappling Hook
+  - §82 Second Cooldown
+  - ''
+  - '§7Total uses: §f%totalUses%'
+  - ''
+  - §a§lUNCOMMON
+  CustomModelData: 12312020
+Mechanics:
+#If FallDamage is disabled players won't get damage for FallDamage when using the GrapplingHook.
+#The cooldown between uses of the grappling hook. If a player without the permission that's a the bottom of this config
+#uses the Grappling Hook while on cooldown, they will get the message of Cooldown.
+#UpdateItemMeta is in case that you change the CustomModelData, so whenever a player uses an old GrapplingHook with an old model data,
+#it will update the GrapplingHook with the new CustomModelData but it will also update the DisplayName and Lore.
+#StatTrack was inspired in CSGO mechanic. Basically it registers each time you use the GrapplingHook. If you set it "false",
+#it won't do the operations to update the Statistic, it will also make useless the placeholder "%totalUses%" from ItemMeta's Lore.
+  FallDamage: true
+  Cooldown: 2
+  UpdateItemMeta: true
+  StatTrack: true
+Messages:
+#As I stated above, Cooldown will only be displayed in case that someone without below's permission uses the
+#GrapplingHook while on cooldown.
+#The "NoPermission" is self explanatory
+#WrongModelData is basically when it detects that the current GrapplingHook uses an old or unknown CustomModelData, so it would
+#update the ItemMeta and also send a message to the user.
+  Cooldown: §cWhow! Slow down there!
+  NoPermission: Not enough permissions
+  WrongModelData: Outdated item. Grappling Hook updated
+Permissions:
+#This is the famous "below permission" or "permission at the bottom of config". Make it fit in your style!
+  Administrator: mytheriautils.reload
