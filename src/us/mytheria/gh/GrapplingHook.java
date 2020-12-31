@@ -148,8 +148,8 @@ public class GrapplingHook extends JavaPlugin implements Listener, CommandExecut
 				if (im.getCustomModelData() == getConfig().getInt(mD)) {
 					if (e.getState() == State.FISHING) {
 						FishHook h = e.getHook();
-						h.setMaxWaitTime(20 * 5);
-						h.setMinWaitTime(20 * 2);
+						h.setMaxWaitTime(20 * 199);
+						h.setMinWaitTime(20 * 99);
 						h.setVelocity(new Vector(h.getVelocity().getX(), h.getVelocity().getY() * 0.80,
 								h.getVelocity().getZ()));
 					}
