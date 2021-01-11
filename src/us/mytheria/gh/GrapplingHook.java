@@ -234,7 +234,6 @@ public class GrapplingHook extends JavaPlugin implements Listener, CommandExecut
 						FishHook h = e.getHook();
 						h.setMaxWaitTime(20 * 5);
 						h.setMinWaitTime(20 * 2);
-						h.getPersistentDataContainer().set(hK, PersistentDataType.STRING, "on");
 					}
 					if (e.getState() == State.REEL_IN || e.getState() == State.IN_GROUND) {
 						doGrapple(p, e, i, im);
